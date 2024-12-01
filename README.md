@@ -1,92 +1,79 @@
-
-# **SyncAnalytica: Real-Time Data Collaboration & Analytics Tool**
-
-**SyncAnalytica** is a platform that streamlines real-time collaboration and data analysis. It simplifies the process of ingesting, processing, visualizing, and generating insights from datasets, with features powered by machine learning and NLP models.
-
-## **Features**
-- Upload and process **.csv** or **.xlsx** files for data analysis.
-- Clean, transform, and preprocess data efficiently.
-- Apply **Machine Learning** models (Random Forest, SVM) for predictive insights.
-- Utilize **NLP** for text analysis and report generation using **BERT/GPT** models.
-- Visualize data through interactive charts, graphs, and word clouds.
-- Generate summaries using the **Gemini API**.
-- Analyze data visualizations and generate insights with **Gemini Vision**.
-
-## **Project Structure**
-
-├── app/ # Main application directory │ 
-├── backend/ # Backend API and data handling │ 
-├── frontend/ # Frontend with React and Streamlit │ 
-├── models/ # Machine learning models (Random Forest, SVM) │ 
-└── nlp/ # NLP models (BERT, GPT) ├── data/ # Sample datasets for testing 
-├── requirements.txt # Python dependencies ├── README.md # Project documentation 
-└── LICENSE # License information
+# syncanalytica
 
 
-## **Getting Started**
 
-### **Prerequisites**
-- **Python 3.8+**
-- **pip** (Python package manager)
-- **Node.js** (for frontend React components)
-  
-### **Installation**
 
-1. **Clone the repository**:
+# Data and Text Exploration Tool  
+
+An interactive web-based tool to upload datasets, analyze data, generate visual insights, and create professional reports effortlessly.  
+
+## Features  
+- **Upload Data**: Supports CSV and Excel file formats.  
+- **Data Analysis**: Provides descriptive statistics, correlation analysis, and missing data summaries.  
+- **Visualizations**: Dynamic plots, heatmaps, and scatter plots.  
+- **Report Generation**: Generates HTML reports for easy sharing and documentation.  
+
+
+
+## Getting Started  
+
+### Installation  
+1. Clone the repository:  
    ```bash
-   git clone https://github.com/guru936/SyncAnalytica.git
-   cd SyncAnalytica
-   
-2. **Install backend dependencies:**
-    ```bash
+   git clone https://github.com/your-repo/data-exploration-tool.git
+   cd data-exploration-tool
+   ```  
+2. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```  
+3. Run the application:  
+   ```bash
+   streamlit run app.py
+   ```  
 
-    pip install -r requirements.txt
+=
 
-3. **Install frontend dependencies:***
-    ```bash
+## Usage  
 
-    cd frontend
-    npm install
+### **Sample Input**  
+1. Upload a CSV or Excel file:  
+   Example CSV data:  
+   ```csv
+   Name, Age, Salary, Department
+   John, 30, 55000, IT
+   Alice, 28, 65000, HR
+   Bob, 35, 70000, IT
+   ```
 
-4. **Run the Application**
+2. Select filters or slicers to customize analysis.  
 
-   1. **Start the backend (Streamlit & Flask):**
-    ```bash
+---
 
-    cd backend
-    streamlit run app.py
+### **Sample Output**  
+#### Data Preview:  
+| Name  | Age | Salary | Department |  
+|-------|-----|--------|------------|  
+| John  | 30  | 55000  | IT         |  
+| Alice | 28  | 65000  | HR         |  
 
-  2. **Run the frontend (React):**
-    ```bash
+#### Analysis Results:  
+1. **Descriptive Statistics**:  
+   | Metric  | Age  | Salary |  
+   |---------|------|--------|  
+   | Mean    | 31.0 | 63333  |  
+   | Median  | 30.0 | 65000  |  
 
-    cd frontend
-    npm start
+2. **Correlation Heatmap**:  
+   Visual representation of correlations between numeric features.  
 
-### **Using SyncAnalytica**
+3. **Interactive Scatter Plot**:  
+   A plot of Age vs. Salary with department-based color coding.  
 
-    Upload your .csv or .xlsx file through the interface.
-    Follow the data ingestion and cleaning steps.
-    Explore visualizations and insights.
-    Generate and download reports in PDF format.
+#### Generated Report:  
+An HTML file summarizing all analysis and insights, downloadable directly.  
 
-### **Contributing**
+---
 
-We welcome contributions to enhance SyncAnalytica! Please open an issue or submit a pull request.
-Steps to Contribute:
-
-    Fork the repository.
-    Create a new feature branch.
-    Commit your changes.
-    Open a pull request.
-
-### **References**
-
-    Pandas Documentation: Pandas Docs
-    Scikit-learn: Scikit-learn Docs
-    Hugging Face (BERT/GPT Models): Hugging Face Docs
-    Streamlit Documentation: Streamlit Docs
-    RAG Model: RAG Paper
-
-### **License**
-
-This project is licensed under the [License](https://opensource.org/licenses/MIT) - see the LICENSE file for details.
+## Contributions  
+Feel free to fork the repository and submit pull requests. Suggestions and bug reports are welcome!  
