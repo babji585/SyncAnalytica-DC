@@ -180,7 +180,7 @@ def display_slicers(df):
         range_values = st.slider(f"Select range for {selected_column}", min_value=int(min_val), max_value=int(max_val), value=(int(min_val), int(max_val)))
         df = df[(df[selected_column] >= range_values[0]) & (df[selected_column] <= range_values[1])]
     
-    st.write(f"### Filtered Data Preview (showing first 10 rows)")
+    st.write(f"### Filtered Data Preview (showing first 5 rows)")
     st.dataframe(df.head())
     return df
 
@@ -188,11 +188,11 @@ def display_slicers(df):
 def display_visualizations(df):
     # Plotting a distribution of numeric data
     numeric_df = df.select_dtypes(include=['number'])
-    if not numeric_df.empty:
-        st.subheader("Distribution of Numeric Data")
-        fig = plt.figure(figsize=(10, 6))
-        numeric_df.hist(bins=15, edgecolor='black', figsize=(10, 6))
-        st.pyplot(fig)
+    # if not numeric_df.empty:
+    #     st.subheader("Distribution of Numeric Data")
+    #     fig = plt.figure(figsize=(10, 6))
+    #     numeric_df.hist(bins=15, edgecolor='black', figsize=(10, 6))
+    #     st.pyplot(fig)
 
     # Plot correlation heatmap using Seaborn
     if not numeric_df.empty:
